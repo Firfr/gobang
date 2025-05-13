@@ -18,7 +18,7 @@
 
 1. 从阿里云或华为云镜像仓库拉取镜像，注意填写镜像标签，镜像仓库中没有`latest`标签
    ```bash
-   docker pull swr.cn-north-4.myhuaweicloud.com/firfe/gobang:2024.12.07
+   swr.cn-north-4.myhuaweicloud.com/firfe/gobang:2024.12.07
    ```
 
 2. 部署  
@@ -32,7 +32,7 @@
        --log-opt max-size=1m \
        --log-opt max-file=3 \
        -p 3000:3000 \
-       docker pull swr.cn-north-4.myhuaweicloud.com/firfe/gobang:2024.12.07
+       swr.cn-north-4.myhuaweicloud.com/firfe/gobang:2024.12.07
        ```
      - `compose.yaml`文件部署 👍推荐
        ```yaml
@@ -40,7 +40,7 @@
        services:
          gobang:
            container_name: gobang
-           image: docker pull swr.cn-north-4.myhuaweicloud.com/firfe/gobang:2024.12.07
+           image: swr.cn-north-4.myhuaweicloud.com/firfe/gobang:2024.12.07
            network_mode: bridge
            restart: always
            logging:
